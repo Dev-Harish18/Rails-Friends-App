@@ -1,0 +1,11 @@
+<tbody>
+  <tr>
+    <td><%= friend.name%></td>
+    <td><%= friend.email%></td>
+    <td><%= friend.phone%></td>
+    <td><%= friend.twitter%></td>
+    <td>  <%= link_to "Show", friend,class:"btn btn-sm btn-primary" %></td>
+    <td><%= link_to "Edit",edit_friend_path(friend),class:"btn btn-sm btn-secondary" %></td>
+    <td><%= button_to "Destroy", friend, method: :delete,class:"btn btn-sm btn-danger" %> </td>
+  </tr>
+  </tbody>

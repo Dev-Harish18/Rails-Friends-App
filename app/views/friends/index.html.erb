@@ -1,0 +1,28 @@
+
+<%if user_signed_in?%>
+<h1>Friend List</h1>
+
+<div id="friends">
+  <table class="table table-hover table-bordered">
+  <thead class="bg-secondary text-light">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Twitter</th>
+      <th scope="col" colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <% @friends.each do |friend| %>
+  <%= puts friend%>
+    <%= render friend %>
+  <% end %>
+
+  </table>
+</div>
+
+<%= link_to "New friend", new_friend_path,class:"btn btn-outline-secondary" %>
+<%else%>
+<h3>Please Sign in to create your personalized friends list</h3>
+<%end%>
